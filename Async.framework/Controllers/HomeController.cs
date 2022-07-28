@@ -14,7 +14,7 @@ namespace Async.framework.Controllers
             // Console.WriteLine("b1:"+ System.Threading.SynchronizationContext.Current.GetHashCode());
 
             var demoClientFramework = new DemoClientFramework();
-            var bothAsync = demoClientFramework.GetBothAsync("https://www.google.com", "https://www.google.com").Result;//.ConfigureAwait(false);
+            var bothAsync = demoClientFramework.GetBothAsync("https://www.google.com", "https://www.google.com").Result;
         
             if (bothAsync.Count.Equals(1))
             {
