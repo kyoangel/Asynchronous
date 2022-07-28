@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async.framework", "Async.framework\Async.framework.csproj", "{C7862EE9-253C-4781-9B9B-ED4A9C56DD38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async.UnitTest", "Async.UnitTest\Async.UnitTest.csproj", "{A381CCA7-B4DF-4983-ADE9-7D79A08350E1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{C7862EE9-253C-4781-9B9B-ED4A9C56DD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7862EE9-253C-4781-9B9B-ED4A9C56DD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7862EE9-253C-4781-9B9B-ED4A9C56DD38}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A381CCA7-B4DF-4983-ADE9-7D79A08350E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A381CCA7-B4DF-4983-ADE9-7D79A08350E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A381CCA7-B4DF-4983-ADE9-7D79A08350E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A381CCA7-B4DF-4983-ADE9-7D79A08350E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

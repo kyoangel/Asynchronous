@@ -1,31 +1,29 @@
 ﻿namespace Async.Models
 {
-    public class MyMiddleware
+    public class DemoMiddleware
     {
         private readonly RequestDelegate _next;
 
-        public MyMiddleware(RequestDelegate next)
+        public DemoMiddleware(RequestDelegate next)
         {
             _next = next;
         }
 
         public async Task Invoke(HttpContext context)
         {
-            // Do something with context near the beginning of request processing.
-            // Console.WriteLine("before:" + context.GetHashCode());
+            // Console.WriteLine("before:" + SynchronizationContext.Current.GetHashCode());
 
-            var whatAspNetCoreDie = new WhatAspNetCoreDie();
+            var whatAspNetCoreDie = new DemoClient();
             var bothAsync = await whatAspNetCoreDie.GetBothAsync("https://www.google.com", "https://www.google.com");
-        
+
             if (bothAsync.Count.Equals(1))
             {
-                Console.WriteLine("oh no");
+                throw new ThreadRunParallelException("oh no, Thread run together!!!");
             }
 
             await _next.Invoke(context);
 
-            // Console.WriteLine("after:"+ context.GetHashCode());
-            // Clean up.
+            // Console.WriteLine("after:" + SynchronizationContext.Current.GetHashCode());
         }
     }
 
@@ -33,7 +31,7 @@
     {
         public static IApplicationBuilder UseMyMiddleware(this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<MyMiddleware>();
+            return builder.UseMiddleware<DemoMiddleware>();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Async.Models
 {
-    public class WhatAspNetCoreDie
+    public class DemoClient
     {
         private readonly HttpClient _client = new();
 
