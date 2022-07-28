@@ -124,7 +124,7 @@
             <DependentUpon>Global.asax</DependentUpon>
         </Compile>
         <Compile Include="Models\demo.cs" />
-        <Compile Include="Models\WhatAspNetFrameworkNormal.cs" />
+        <Compile Include="Models\DemoClientFramework.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

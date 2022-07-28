@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using Async.framework.Models;
 
@@ -14,12 +11,12 @@ namespace Async.framework.Controllers
         {
             Console.WriteLine("b:"+ System.Web.HttpContext.Current.GetHashCode());
             // Console.WriteLine("b:"+ System.Threading.SynchronizationContext.Current.GetHashCode());
-            var whatAspNetFrameworkNormal = new WhatAspNetFrameworkNormal();
+            var demoClientFramework = new DemoClientFramework();
             // Console.WriteLine("b1:"+ Request.RequestContext.HttpContext.GetHashCode());
             Console.WriteLine("b1:"+ System.Web.HttpContext.Current.GetHashCode());
             // Console.WriteLine("b1:"+ System.Threading.SynchronizationContext.Current.GetHashCode());
 
-            var bothAsync = await whatAspNetFrameworkNormal.GetBothAsync("https://www.google.com", "https://www.google.com");//.ConfigureAwait(false);
+            var bothAsync = await demoClientFramework.GetBothAsync("https://www.google.com", "https://www.google.com");//.ConfigureAwait(false);
         
             if (bothAsync.Count.Equals(1))
             {

@@ -1,11 +1,12 @@
 ﻿namespace Async.Models
 {
-    public class DemoClient
+    public class DemoClientCore
     {
         private readonly HttpClient _client = new();
 
-        public async Task<List<string>> GetBothAsync(string url1, string url2)
+        public async Task<IEnumerable<string>> GetBothAsync(string url1, string url2)
         {
+            // var result = new ConcurrentBag<string>();
             var result = new List<string>();
             var task1 = GetOneAsync(result, url1);
             var task2 = GetOneAsync(result, url2);

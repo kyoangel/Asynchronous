@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Async.framework.Models
 {
-    public class WhatAspNetFrameworkNormal
+    public class DemoClientFramework
     {
         private readonly HttpClient _client = new HttpClient();
 

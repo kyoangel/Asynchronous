@@ -13,8 +13,8 @@
         {
             // Console.WriteLine("before:" + SynchronizationContext.Current.GetHashCode());
 
-            var whatAspNetCoreDie = new DemoClient();
-            var bothAsync = await whatAspNetCoreDie.GetBothAsync("https://www.google.com", "https://www.google.com");
+            var demoClient = new DemoClientCore();
+            var bothAsync = (await demoClient.GetBothAsync("https://www.google.com", "https://www.google.com")).ToList();
 
             if (bothAsync.Count.Equals(1))
             {
