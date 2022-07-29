@@ -51,9 +51,6 @@
         <Reference Include="System.ComponentModel.DataAnnotations" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data.DataSetExtensions" />
-        <Reference Include="System.Web.Mvc">
-          <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Web.Mvc\v4.0_5.1.0.0__31bf3856ad364e35\System.Web.Mvc.dll</HintPath>
-        </Reference>
         <Reference Include="System.Xml.Linq" />
         <Reference Include="System.Web" />
         <Reference Include="System.Web.Extensions" />
